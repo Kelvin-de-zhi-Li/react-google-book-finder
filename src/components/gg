@@ -1,0 +1,20 @@
+import React from "react";
+import Bookresult from "./Bookresult";
+
+const Book = ({ result }) => {
+  return (
+    <>
+      {result.map((book) => {
+        return (
+          <>
+            <div className="book-container">
+              <Bookresult key={book.volumeInfo.title} book={book} />;
+            </div>
+          </>
+        );
+      })}
+    </>
+  );
+};
+
+export default Book;
